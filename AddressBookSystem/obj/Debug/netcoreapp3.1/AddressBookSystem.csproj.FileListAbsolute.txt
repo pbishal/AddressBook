@@ -1,0 +1,13 @@
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.exe
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.deps.json
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.runtimeconfig.json
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.runtimeconfig.dev.json
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.dll
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\bin\Debug\netcoreapp3.1\AddressBookSystem.pdb
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.csprojAssemblyReference.cache
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.AssemblyInfoInputs.cache
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.AssemblyInfo.cs
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.csproj.CoreCompileInputs.cache
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.dll
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.pdb
+C:\Users\Bishal Pradhan\Desktop\bridgelabz\dotNET\AddressBookSystem\AddressBookSystem\AddressBookSystem\obj\Debug\netcoreapp3.1\AddressBookSystem.genruntimeconfig.cache
