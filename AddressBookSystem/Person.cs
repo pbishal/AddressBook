@@ -4,34 +4,83 @@ using System.Text;
 
 namespace AddressBookSystem
 {
-    class Person
-    {
-        private String lname, address, city, state, phone, zip, email; //Declaring (Creating) Variables
-        public Person(String fname, String lname, String address, String city, String state, String phone, String zip, string email)
-        {                                                   //constructor
-            this.FirstName = fname;
-            this.LastName = lname;
-            this.Address = address;
-            this.City = city;
-            this.State = state;
-            this.PhoneNo = phone;
-            this.ZipCode = zip;
-            this.email = email;
-        }
+	public class Person
+	{
+		//instance variable
+		public string FirstName;
+		public string LastName;
+		public string city;
+		public string state;
+		public string email;
+		public string phoneNumber;
 
-        public string FirstName { get; set; }         // get method returns the value of the variable FirstName.
-                                                      // set method assigns a value to the name variable.
-        public string LastName { get => lname; set => lname = value; }
-        public string Address { get => address; set => address = value; }
-        public string City { get => city; set => city = value; }
-        public string State { get => state; set => state = value; }
-        public string PhoneNo { get => phone; set => phone = value; }
-        public string ZipCode { get => zip; set => zip = value; }
-        public string Email { get => email; set => email = value; }
-        public override string ToString() //Tostring  method store value
-        {
-            return "FirstName:- " + FirstName + "\nLastName:- " + LastName + " \nAddress:- " + Address + " \nCity:- " + City
-                 + "\nState:- " + State + "\nZipCode:- " + ZipCode + "\nPhoneNo:- " + PhoneNo + "\nEmail:- " + email + " " + "\n";
-        }
-    }
+		//parameterized constructor for initializing instance member
+		public Person(string firstName, string lastName, string city, string state, string email, string phoneNumber)//Parameterized Constructor
+		{
+			this.FirstName = firstName;
+			this.LastName = lastName;
+			this.city = city;
+			this.state = state;
+			this.email = email;
+			this.phoneNumber = phoneNumber;
+		}
+		public String getFirstName() /// get method returns the value of the variable FirstName.
+		{
+			return FirstName;
+		}
+
+		public void setFirstName(String firstName)  // set method assigns a value to the name variable.
+		{
+			this.FirstName = firstName;
+		}
+
+		public String getLastName() //get method returns the value of the variable LastName.
+		{
+			return LastName;
+		}
+
+		public void setLastName(String lastName) //set method assigns a value to the name variable.
+		{
+			this.LastName = lastName;
+		}
+
+		public String getCity()//get method returns the value of the variable city.
+		{
+			return city;
+		}
+
+		public void setCity(String city)//get method returns the value of the variable city.
+		{
+			this.city = city;
+		}
+
+		public String getState()
+		{
+			return state;
+		}
+
+		public void setState(String state)
+		{
+			this.state = state;
+		}
+		public String getPhoneNumber()
+		{
+			return phoneNumber;
+		}
+
+		public void setPhoneNumber(String phoneNumber)
+		{
+			this.phoneNumber = phoneNumber;
+		}
+
+		public String getEmail()
+		{
+			return email;
+		}
+
+		public void setEmail(String email)
+		{
+			this.email = email;
+		}
+	}
 }
