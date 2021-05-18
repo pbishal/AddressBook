@@ -8,22 +8,16 @@ namespace AddressBookSystem
         {
             Console.WriteLine("******* Welcome To AddressBook *******");
 
-            Console.Write("Enter First Name:- ");  // Take input 
-            string firstName = Console.ReadLine(); //Store input in firstName variable
-            Console.Write("Enter Last Name:- ");
-            string lastName = Console.ReadLine();
-            Console.Write("Enter Address:- ");
-            string address = Console.ReadLine();
-            Console.Write("Enter City:- ");
-            string city = Console.ReadLine();
-            Console.Write("Enter State:- ");
-            string state = Console.ReadLine();
-            Console.Write("Enter Zip Code :- ");
-            string zip = Console.ReadLine();
-            Console.Write("Enter Phone Number:- ");
-            string pNumber = Console.ReadLine();
-            Console.Write("Enter Email:- ");
-            string Email = Console.ReadLine();
+            Person person = new Person("Bishal", "Pradhan", "Btm", "Bengaluru", "Karnataka", "560076", "9439455606", "pbishal60@gmail.com");
+            Console.WriteLine(person.getName());
+            Console.WriteLine(person.getlastName());
+            Console.WriteLine(person.getaddress());
+            Console.WriteLine(person.getcity());
+            Console.WriteLine(person.getstate());
+            Console.WriteLine(person.getzip());
+            Console.WriteLine(person.getphone());
+            Console.WriteLine(person.getemail());
+            Console.ReadLine();
         }
     }
 }
