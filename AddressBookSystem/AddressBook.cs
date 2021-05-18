@@ -70,6 +70,19 @@ namespace AddressBookSystem
                 Console.WriteLine("\n{0}\t{1}", person.FirstName, person.LastName);
             }
         }
+        public void findCountSameStateOrCityPerson()
+        {
+            Console.WriteLine("\n Enter city and state");
+            string city = Console.ReadLine();
+            string state = Console.ReadLine();
+            int count2 = 0;
+            foreach (Person person in adressBookList.FindAll(item => item.city == city && item.state == state).ToList())
+            {
+                Console.WriteLine("\n{0}\t{1}", person.FirstName, person.LastName);
+                count2++;
+            }
+            Console.WriteLine("This {0} persons are in same state {1} \t {2} ", count2, state, city);
+        }
         public void editPerson()
         {
             Console.WriteLine("\n enter First name to edit details:");
@@ -89,7 +102,7 @@ namespace AddressBookSystem
                     {
                         case 1:
                             Console.WriteLine("enter new Mobile number:");
-                            string mobileNo = Console.ReadLine();
+                            string mobileNo = (Console.ReadLine());
                             person.setPhoneNumber(mobileNo);
                             Console.WriteLine("mobile no. is updated\n");
                             break;
