@@ -6,7 +6,6 @@ namespace AddressBookSystem
 {
     public interface IPerson
     {
-        // void addPerson();
         void displayPerson();
         void editPerson();
         void deletePerson();

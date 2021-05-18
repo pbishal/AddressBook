@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.Text;
-=======
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
->>>>>>> UC6_ReFactor
 
 namespace AddressBookSystem
 {
@@ -14,9 +10,6 @@ namespace AddressBookSystem
     {
         static void Main(string[] args)
         {
-<<<<<<< HEAD
-            Console.WriteLine("Welcome to address book system");
-=======
             Console.WriteLine("**** Welcome To AddressBook ****");
             Dictionary<string, AddressBook> Dict = new Dictionary<string, AddressBook>();//string is Tkey and AddressBook is TValue.
             bool ProgramIsRunning = true;
@@ -118,7 +111,6 @@ namespace AddressBookSystem
                 string email = Console.ReadLine();
                 addressBook.AddContact(firstName, lastName, address, city, state, phoneNumber, email);
             }
->>>>>>> UC6_ReFactor
         }
     }
 }
