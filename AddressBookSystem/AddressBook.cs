@@ -10,7 +10,10 @@ namespace AddressBookSystem
     {
 
         List<Person> adressBookList = new List<Person>();//to add details in addressbook
-
+        public AddressBook()
+        {
+            this.adressBookList = new List<Person>();
+        }
         public void AddContact(string firstName, string lastName, string address, string city, string state, string phoneNumber, string email)
         {
             bool flag = this.adressBookList.Any(item => item.FirstName == firstName && item.LastName == lastName);
@@ -20,12 +23,6 @@ namespace AddressBookSystem
                 adressBookList.Add(person);
                 Console.WriteLine("Contact added Successfully");
             }
-
-            if (!flag)
-            {
-                Console.WriteLine("Exit");
-            }
-
             else
             {
                 Console.WriteLine("{0}{1} this contact already exist in Address Book :", firstName, lastName);
@@ -37,6 +34,40 @@ namespace AddressBookSystem
             foreach (var person in adressBookList)
             {
                 Console.WriteLine("FirstName: {0}, LastName: {1}, city: {2}, state: {3}, email: {4}, phoneNumber: {5}", person.FirstName, person.LastName, person.city, person.state, person.email, person.phoneNumber);
+            }
+        }
+
+        public void searchPerson()
+        {
+            Console.WriteLine("\n Enter city or state ");
+            string city = Console.ReadLine();
+            string state = Console.ReadLine();
+
+            foreach (Person person in adressBookList.FindAll(item => item.city == city && item.state == state).ToList())
+            {
+                Console.WriteLine("\n{0}\t{1}", person.FirstName, person.LastName);
+            }
+        }
+
+        public void sameCityPerson()
+        {
+            Console.WriteLine("\n Enter city for display Same city contacts ");
+            string city = Console.ReadLine();
+
+            foreach (Person person in adressBookList.FindAll(item => item.city == city).ToList())
+            {
+                Console.WriteLine("\n{0}\t{1}", person.FirstName, person.LastName);
+            }
+        }
+
+        public void sameStatePerson()
+        {
+            Console.WriteLine("\n Enter state for display Same State contacts ");
+            string state = Console.ReadLine();
+
+            foreach (Person person in adressBookList.FindAll(item => item.state == state).ToList())
+            {
+                Console.WriteLine("\n{0}\t{1}", person.FirstName, person.LastName);
             }
         }
         public void editPerson()
@@ -96,23 +127,6 @@ namespace AddressBookSystem
             var lastName = Console.ReadLine();
             adressBookList.RemoveAll(item => item.FirstName == firstName && item.LastName == lastName);
 
-        }
-        public bool CheckExist(string fname)  //Check exist method
-        {
-            int flag = 0;
-            foreach (Person person in adressBookList) //Check list of class person
-            {
-                if (person.FirstName.Equals(fname)) //check first name and user input are equal or not
-                {
-                    flag = 1;
-                    break;
-                }
-            }
-            if (flag == 1)
-            {
-                return true;
-            }
-            return false;
         }
     }
 }
