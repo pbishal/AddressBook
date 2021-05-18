@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    public class AddressBook
+    public class AddressBook : IPerson
     {
 
+        List<Person> adressBookList = new List<Person>();//to add details in addressbook
 
-        List<Person> adressBookList;
-        public AddressBook()
-        {
-            this.adressBookList = new List<Person>();
-        }
         public void AddContact(string firstName, string lastName, string address, string city, string state, string phoneNumber, string email)
         {
             bool flag = this.adressBookList.Any(item => item.FirstName == firstName && item.LastName == lastName);
@@ -62,7 +58,7 @@ namespace AddressBookSystem
                     {
                         case 1:
                             Console.WriteLine("enter new Mobile number:");
-                            string mobileNo = (Console.ReadLine());
+                            string mobileNo = Console.ReadLine();
                             person.setPhoneNumber(mobileNo);
                             Console.WriteLine("mobile no. is updated\n");
                             break;

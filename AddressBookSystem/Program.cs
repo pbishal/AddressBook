@@ -107,7 +107,7 @@ namespace AddressBookSystem
                 Console.WriteLine("Enter State : ");
                 string state = Console.ReadLine();
                 Console.WriteLine("Enter Phone Number : ");
-                string phoneNumber = Console.ReadLine();
+                string phoneNumber = (Console.ReadLine());
                 Console.WriteLine("Enter Email id :");
                 string email = Console.ReadLine();
                 addressBook.AddContact(firstName, lastName, address, city, state, phoneNumber, email);
