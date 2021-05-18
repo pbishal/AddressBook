@@ -8,22 +8,26 @@ namespace AddressBookSystem
         {
             Console.WriteLine("******* Welcome To AddressBook *******");
 
-            Console.Write("Enter First Name:- ");  // Take input 
-            string firstName = Console.ReadLine(); //Store input in firstName variable
-            Console.Write("Enter Last Name:- ");
+            AddressBook addressBook = new AddressBook();
+            Console.WriteLine("Enter First Name :");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Enter Last Name :");
             string lastName = Console.ReadLine();
-            Console.Write("Enter Address:- ");
+            Console.WriteLine("Enter Address :");
             string address = Console.ReadLine();
-            Console.Write("Enter City:- ");
+            Console.WriteLine("Enter City :");
             string city = Console.ReadLine();
-            Console.Write("Enter State:- ");
+            Console.WriteLine("Enter State :");
             string state = Console.ReadLine();
-            Console.Write("Enter Zip Code :- ");
-            string zip = Console.ReadLine();
-            Console.Write("Enter Phone Number:- ");
-            string pNumber = Console.ReadLine();
-            Console.Write("Enter Email:- ");
-            string Email = Console.ReadLine();
+            Console.WriteLine("Enter Email :");
+            string email = Console.ReadLine();
+            Console.WriteLine("Enter Zip :");
+            int zip = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Phone Number :");
+            long phoneNumber = Convert.ToInt64(Console.ReadLine());
+            addressBook.AddContact(firstName, lastName, address, city, state, email, zip, phoneNumber);
+            addressBook.ViewContact();
+            Console.Read();
         }
     }
 }
