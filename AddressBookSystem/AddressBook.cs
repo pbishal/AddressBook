@@ -1,17 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    class AddressBook : IPerson
+    public class AddressBook
     {
-        List<Person> adressBookList = new List<Person>();
 
+
+        List<Person> adressBookList;
+        public AddressBook()
+        {
+            this.adressBookList = new List<Person>();
+        }
         public void AddContact(string firstName, string lastName, string address, string city, string state, string phoneNumber, string email)
         {
-            Person person = new Person(firstName, lastName, city, state, email, phoneNumber);
-            adressBookList.Add(person);
+            bool flag = this.adressBookList.Any(item => item.FirstName == firstName && item.LastName == lastName);
+            if (!flag)
+            {
+                Person person = new Person(firstName, lastName, city, state, email, phoneNumber);
+                adressBookList.Add(person);
+                Console.WriteLine("Contact added Successfully");
+            }
+
+            if (!flag)
+            {
+                Console.WriteLine("Exit");
+            }
+
+            else
+            {
+                Console.WriteLine("{0}{1} this contact already exist in Address Book :", firstName, lastName);
+            }
         }
         public void displayPerson()
         {
@@ -40,7 +62,7 @@ namespace AddressBookSystem
                     {
                         case 1:
                             Console.WriteLine("enter new Mobile number:");
-                            string mobileNo = Console.ReadLine();
+                            string mobileNo = (Console.ReadLine());
                             person.setPhoneNumber(mobileNo);
                             Console.WriteLine("mobile no. is updated\n");
                             break;
@@ -77,6 +99,24 @@ namespace AddressBookSystem
             Console.WriteLine("Enter lastname of the user you want to remove");
             var lastName = Console.ReadLine();
             adressBookList.RemoveAll(item => item.FirstName == firstName && item.LastName == lastName);
+
+        }
+        public bool CheckExist(string fname)  //Check exist method
+        {
+            int flag = 0;
+            foreach (Person person in adressBookList) //Check list of class person
+            {
+                if (person.FirstName.Equals(fname)) //check first name and user input are equal or not
+                {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 1)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
